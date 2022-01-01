@@ -1,0 +1,16 @@
+<ul id="classes">
+  <% @classes.each do |class_name| %>
+    <li class="<%= nil %>">
+      <a href="/lists/<%= class_name[:id] %>">
+        <h2><%= class_name[:class_name] %></h2>
+        <p>
+          <%= class_name[:num_students] %>
+        </p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<% content_for :header_links do %>
+  <a class="add" href="/new_class">New Class</a>
+<% end %>
